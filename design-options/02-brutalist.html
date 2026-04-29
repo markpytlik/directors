@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 02 — Brutalist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f1efe8; --paper:#fff; --ink:#000; --rule:#000;
+  --hot:#ff3b00; --max:1320px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.mast{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:2px solid var(--rule);padding:0;font-family:'IBM Plex Mono',monospace}
+.mast > div{padding:14px 24px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.mast > div + div{border-left:2px solid var(--rule)}
+.hero{border-bottom:2px solid var(--rule)}
+.hero-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:0;border-left:2px solid var(--rule);border-right:2px solid var(--rule)}
+.hero-grid .l{padding:64px 40px}
+.hero-grid .r{padding:64px 32px;border-left:2px solid var(--rule);background:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.7}
+.eye{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--ink);color:var(--bg);display:inline-block;padding:4px 10px;margin-bottom:32px}
+h1{font-family:'Archivo Black',Impact,sans-serif;font-weight:900;font-size:clamp(64px,11vw,180px);line-height:.84;letter-spacing:-.04em;text-transform:uppercase;margin:0}
+h1 .red{color:var(--hot)}
+h1 .ko{-webkit-text-stroke:2px var(--ink);-webkit-text-fill-color:transparent}
+.dek{font-family:'Inter',sans-serif;font-size:18px;line-height:1.45;font-weight:500;max-width:48ch;margin-top:36px}
+.r .head{font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.r ul{list-style:none;padding:0;margin:0 0 22px}
+.r li{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding:7px 0}
+.section-h{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:80px 1fr 200px;border-bottom:2px solid var(--rule);border-left:2px solid var(--rule);border-right:2px solid var(--rule)}
+.section-h > *{padding:24px;border-right:2px solid var(--rule)}
+.section-h > :last-child{border-right:none}
+.section-h .num{font-family:'Archivo Black',sans-serif;font-size:36px;line-height:1;color:var(--hot)}
+.section-h .ttl{font-family:'Archivo Black',sans-serif;font-size:48px;line-height:1;text-transform:uppercase;letter-spacing:-.02em}
+.section-h .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;text-align:right;display:flex;align-items:center;justify-content:flex-end}
+.list{max-width:var(--max);margin:0 auto;border-left:2px solid var(--rule);border-right:2px solid var(--rule)}
+.dir{display:grid;grid-template-columns:120px 380px 1fr;border-bottom:2px solid var(--rule)}
+.dir > *{padding:32px}
+.dir > * + *{border-left:2px solid var(--rule)}
+.rank{font-family:'Archivo Black',sans-serif;font-size:120px;line-height:.85;letter-spacing:-.04em}
+.rank b{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;font-weight:400;letter-spacing:.18em;margin-top:14px;color:var(--hot)}
+.portrait{background:var(--paper);padding:0;position:relative;border-left:2px solid var(--rule);overflow:hidden}
+.portrait svg{width:100%;height:100%;display:block}
+.portrait .stamp{position:absolute;left:18px;top:18px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--hot);color:var(--paper);padding:4px 8px}
+.meta-col{padding:32px}
+.name{font-family:'Archivo Black',sans-serif;font-size:64px;line-height:.92;letter-spacing:-.02em;text-transform:uppercase;margin:0 0 4px}
+.nation{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px}
+.blurb{font-family:'Inter',sans-serif;font-size:17px;line-height:1.5;font-weight:500;max-width:60ch;margin:0 0 28px}
+.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0;border-top:2px solid var(--rule)}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--paper);border-right:2px solid var(--rule);border-bottom:2px solid var(--rule)}
+.tile:nth-child(4n){border-right:none}
+.tile .thumb{aspect-ratio:16/9;background:#ddd;position:relative;overflow:hidden;border-bottom:2px solid var(--rule)}
+.tile .thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+.tile .num{position:absolute;left:8px;top:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;background:var(--ink);color:var(--bg);padding:3px 8px}
+.tile .vt{padding:14px}
+.tile .vt b{display:block;font-family:'Archivo Black',sans-serif;font-weight:900;font-size:14px;letter-spacing:-.005em;text-transform:uppercase;margin-bottom:2px}
+.tile .vt s{display:block;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink);letter-spacing:.04em}
+</style></head>
+<body>
+
+<div class="mast">
+  <div>directors.markpytlik.com</div>
+  <div>VOL.01 / MUSIC VIDEO EDITION</div>
+  <div style="text-align:right">2026 · ONGOING</div>
+</div>
+
+<section class="hero">
+<div class="hero-grid">
+  <div class="l">
+    <span class="eye">The greatest of all time</span>
+    <h1>The 20<br><span class="red">GREATEST</span><br><span class="ko">music video</span><br>directors,<br>ever.</h1>
+    <p class="dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors quietly making the next decade's canon.</p>
+  </div>
+  <aside class="r">
+    <div class="head">Index</div>
+    <ul>
+      <li><span>All-time top 20</span><span>p.01</span></li>
+      <li><span>Up &amp; coming ten</span><span>p.21</span></li>
+      <li><span>Edited by</span><span>Mark Pytlik</span></li>
+      <li><span>Updated</span><span>Continuously</span></li>
+    </ul>
+    <div class="head">Method</div>
+    <p style="margin:0">Loosely ranked. Heavily opinionated. Sourced from a Google Sheet you can fork. Click any thumbnail to open the video on YouTube in a new tab.</p>
+  </aside>
+</div>
+</section>
+
+<div class="section-h">
+  <div class="num">01</div>
+  <div class="ttl">The Canon.</div>
+  <div class="meta">All-time / 001–020</div>
+</div>
+
+<div class="list">
+  <article class="dir">
+    <div class="rank">01<b>RANK</b></div>
+    <div class="portrait">
+      <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#000"/><circle cx="100" cy="92" r="38" fill="#ff3b00"/><path d="M30 250 C30 178, 60 148, 100 148 C140 148, 170 178, 170 250 Z" fill="#ff3b00"/></svg>
+      <span class="stamp">Placeholder</span>
+    </div>
+    <div class="meta-col">
+      <h3 class="name">Hype<br>Williams</h3>
+      <div class="nation">United States · b.1970</div>
+      <p class="blurb">No single director shaped the look of late-90s and 2000s hip-hop more decisively. Fish-eye lenses, Vaseline glow, color-blocked sets, high-fashion absurdity — Hype Williams turned the rap video into a pop-art object.</p>
+    </div>
+  </article>
+  <div class="videos">
+    <a class="tile" href="#"><div class="thumb"><span class="num">V.01</span></div><div class="vt"><b>Missy Elliott</b><s>The Rain</s></div></a>
+    <a class="tile" href="#"><div class="thumb"><span class="num">V.02</span><img src="https://img.youtube.com/vi/gUhRKVIjJtw/hqdefault.jpg"></div><div class="vt"><b>Notorious B.I.G.</b><s>Mo Money Mo Problems</s></div></a>
+    <a class="tile" href="#"><div class="thumb"><span class="num">V.03</span></div><div class="vt"><b>Jay-Z</b><s>Big Pimpin'</s></div></a>
+    <a class="tile" href="#"><div class="thumb"><span class="num">V.04</span><img src="https://img.youtube.com/vi/PsO6ZnUZI0g/hqdefault.jpg"></div><div class="vt"><b>Kanye West</b><s>Stronger</s></div></a>
+  </div>
+</div>
+
+</body></html>

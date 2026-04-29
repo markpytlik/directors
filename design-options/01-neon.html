@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 01 — Neon Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08080a; --paper:#0e0e12; --rule:#27272d;
+  --ink:#f5f3ee; --ink-2:#a3a3aa; --ink-3:#6c6c74;
+  --acid:#c0ff32; --magenta:#ff2e9a; --cyan:#41e0ff; --amber:#ffae3d;
+  --max:1320px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mast{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid var(--rule);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.mast .blink{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acid);margin-right:8px;vertical-align:middle;animation:b 1.6s infinite}
+@keyframes b{0%,40%,100%{opacity:1}50%,80%{opacity:.2}}
+.hero{max-width:var(--max);margin:0 auto;padding:96px 28px 48px;position:relative}
+.hero .eye{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--magenta);margin-bottom:28px}
+.hero h1{font-family:'Anton',Impact,Helvetica,sans-serif;font-weight:400;font-size:clamp(56px,11vw,180px);line-height:.86;letter-spacing:-.02em;text-transform:uppercase;margin:0;mix-blend-mode:normal}
+.hero h1 .a{color:var(--ink)}
+.hero h1 .b{color:var(--acid)}
+.hero h1 .c{color:var(--ink);-webkit-text-stroke:1.5px var(--cyan);-webkit-text-fill-color:transparent}
+.hero h1 .d{font-style:italic;color:var(--magenta)}
+.hero .dek{font-size:18px;line-height:1.55;color:var(--ink-2);max-width:62ch;margin-top:36px}
+.hero .meta{display:flex;gap:32px;margin-top:48px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.hero .meta b{color:var(--acid);font-weight:700}
+.section-h{max-width:var(--max);margin:64px auto 0;padding:32px 28px;border-top:1px solid var(--rule);display:flex;align-items:baseline;gap:32px;justify-content:space-between}
+.section-h .lab{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan)}
+.section-h h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(36px,5vw,64px);line-height:.94;letter-spacing:-.01em;margin:0;text-transform:uppercase}
+.section-h h2 em{font-style:italic;color:var(--acid);font-family:'Space Grotesk';font-weight:700}
+.section-h .count{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-3);letter-spacing:.18em;text-transform:uppercase}
+.list{max-width:var(--max);margin:0 auto;padding:0 28px 96px}
+.dir{display:grid;grid-template-columns:120px 360px 1fr;gap:36px;padding:48px 0;border-top:1px solid var(--rule);align-items:start}
+.rank{font-family:'Anton',sans-serif;font-size:120px;line-height:.84;letter-spacing:-.04em;color:var(--ink);background:linear-gradient(180deg,var(--acid),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.portrait{aspect-ratio:4/5;background:var(--paper);border:1px solid var(--rule);position:relative;overflow:hidden}
+.portrait svg{width:100%;height:100%;display:block}
+.portrait::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,rgba(255,255,255,.02) 3px,rgba(255,255,255,.02) 4px);pointer-events:none}
+.portrait .tag{position:absolute;left:10px;top:10px;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--acid);padding:3px 8px}
+.meta{min-width:0}
+.name{font-family:'Anton',sans-serif;font-size:80px;line-height:.94;letter-spacing:-.02em;text-transform:uppercase;margin:0 0 6px;color:var(--ink)}
+.nation{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:22px}
+.blurb{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:60ch;margin:0 0 30px}
+.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--paper);border:1px solid var(--rule);transition:border-color .15s,transform .15s}
+.tile:hover{border-color:var(--acid);transform:translateY(-2px)}
+.tile .thumb{aspect-ratio:16/9;background:#181820;position:relative;overflow:hidden}
+.tile .thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(1.15) contrast(1.05)}
+.tile .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(192,255,50,0) 0%,rgba(192,255,50,.06) 50%,rgba(255,46,154,0) 100%);mix-blend-mode:screen;pointer-events:none}
+.tile .play{position:absolute;left:12px;bottom:12px;width:34px;height:34px;border:1.5px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);background:rgba(8,8,10,.55)}
+.tile .play::before{content:"";display:block;width:0;height:0;border-left:8px solid var(--acid);border-top:5px solid transparent;border-bottom:5px solid transparent;margin-left:2px}
+.tile .vt{padding:14px 14px 16px}
+.tile .vt b{display:block;font-weight:500;font-size:13px;color:var(--ink);margin-bottom:2px}
+.tile .vt s{display:block;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink-3);letter-spacing:.06em}
+</style></head>
+<body>
+
+<div class="mast">
+  <span><span class="blink"></span>LIVE · DIRECTORS.MARKPYTLIK.COM</span>
+  <span>VOL.01 — MUSIC&nbsp;VIDEO&nbsp;EDITION</span>
+</div>
+
+<section class="hero">
+  <div class="eye">// THE GREATEST OF ALL TIME</div>
+  <h1>
+    <span class="a">THE 20</span><br>
+    <span class="b">GREATEST</span><br>
+    <span class="d">music video</span><br>
+    <span class="c">DIRECTORS</span><br>
+    <span class="a">EVER.</span>
+  </h1>
+  <p class="dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors who are quietly making the next decade's canon.</p>
+  <div class="meta">
+    <span>By <b>Mark Pytlik</b></span>
+    <span>30 entries</span>
+    <span>Updated continuously</span>
+  </div>
+</section>
+
+<div class="section-h">
+  <div>
+    <div class="lab">// All-time top 20</div>
+    <h2>The <em>canon</em>.</h2>
+  </div>
+  <div class="count">001 — 020</div>
+</div>
+
+<div class="list">
+  <article class="dir">
+    <div class="rank">01</div>
+    <div class="portrait">
+      <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#1a1a20"/><circle cx="100" cy="92" r="38" fill="#3a3a45"/><path d="M30 250 C30 178, 60 148, 100 148 C140 148, 170 178, 170 250 Z" fill="#3a3a45"/></svg>
+      <span class="tag">PLACEHOLDER</span>
+    </div>
+    <div class="meta">
+      <h3 class="name">HYPE<br>WILLIAMS</h3>
+      <div class="nation">// United States</div>
+      <p class="blurb">No single director shaped the look of late-90s and 2000s hip-hop more decisively. Fish-eye lenses, Vaseline glow, color-blocked sets, high-fashion absurdity — Hype Williams turned the rap video into a pop-art object.</p>
+      <div class="videos">
+        <a class="tile" href="#"><div class="thumb"><div class="play"></div></div><div class="vt"><b>Missy Elliott</b><s>The Rain</s></div></a>
+        <a class="tile" href="#"><div class="thumb"><img src="https://img.youtube.com/vi/gUhRKVIjJtw/hqdefault.jpg"><div class="play"></div></div><div class="vt"><b>Notorious B.I.G.</b><s>Mo Money Mo Problems</s></div></a>
+        <a class="tile" href="#"><div class="thumb"><div class="play"></div></div><div class="vt"><b>Jay-Z</b><s>Big Pimpin'</s></div></a>
+        <a class="tile" href="#"><div class="thumb"><img src="https://img.youtube.com/vi/PsO6ZnUZI0g/hqdefault.jpg"><div class="play"></div></div><div class="vt"><b>Kanye West</b><s>Stronger</s></div></a>
+      </div>
+    </div>
+  </article>
+</div>
+
+</body></html>
