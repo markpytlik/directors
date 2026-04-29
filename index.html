@@ -329,9 +329,35 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
+
+  /* ---------- theme switcher ---------- */
+  .theme-switcher {
+    position: fixed; top: 14px; right: 14px;
+    display: flex; gap: 0;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    z-index: 100;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+  }
+  .theme-switcher a {
+    padding: 7px 10px;
+    color: var(--ink); text-decoration: none;
+    border-right: 1px solid var(--rule);
+  }
+  .theme-switcher a:last-child { border-right: none; }
+  .theme-switcher a.on { background: var(--ink); color: var(--paper); }
 </style>
 </head>
 <body>
+
+<nav class="theme-switcher">
+  <a href="/" class="on">Editorial</a>
+  <a href="/1.html">Neon</a>
+  <a href="/2.html">Brutalist</a>
+  <a href="/3.html">Maximalist</a>
+</nav>
 
 <header class="masthead">
   <div class="kicker">A Personal List &middot; Music Video Edition</div>
