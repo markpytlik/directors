@@ -22,8 +22,7 @@ img{display:block;max-width:100%}
 @media (max-width:920px){.hero-grid .r{border-left:none;border-top:2px solid var(--rule)}}
 .eye{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--ink);color:var(--bg);display:inline-block;padding:4px 10px;margin-bottom:32px}
 h1{font-family:'Archivo Black',Impact,sans-serif;font-weight:900;font-size:clamp(64px,11vw,180px);line-height:.84;letter-spacing:-.04em;text-transform:uppercase;margin:0}
-h1 .red{color:var(--hot)}
-h1 .ko{-webkit-text-stroke:2px var(--ink);-webkit-text-fill-color:transparent}
+h1 em{font-style:normal;color:var(--hot);font-family:inherit}
 .dek{font-family:'Inter',sans-serif;font-size:18px;line-height:1.45;font-weight:500;max-width:48ch;margin-top:36px}
 .r .head{font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;border-bottom:2px solid var(--ink);padding-bottom:8px}
 .r ul{list-style:none;padding:0;margin:0 0 22px}
@@ -79,25 +78,24 @@ footer{max-width:var(--max);margin:0 auto;border:2px solid var(--rule);border-to
 </nav>
 
 <header class="mast">
-  <div>directors.markpytlik.com</div>
-  <div>VOL.01 / MUSIC VIDEO EDITION</div>
+  <div data-copy="masthead_right">directors.markpytlik.com</div>
+  <div data-copy="masthead_left">VOL.01 / MUSIC VIDEO EDITION</div>
   <div style="text-align:right">2026 · ONGOING</div>
 </header>
 
 <section class="hero">
 <div class="hero-grid">
   <div class="l">
-    <span class="eye">The greatest of all time</span>
-    <h1>The 20<br><span class="red">GREATEST</span><br><span class="ko">music video</span><br>directors,<br>ever.</h1>
-    <p class="dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors quietly making the next decade's canon.</p>
+    <span class="eye" data-copy="hero_eyebrow">The greatest of all time</span>
+    <h1 data-copy="hero_h1" data-copy-emph="hero_h1_emphasis">The 20 greatest <em>music video</em> directors, ever.</h1>
+    <p class="dek" data-copy="hero_dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors quietly making the next decade's canon.</p>
   </div>
   <aside class="r">
     <div class="head">Index</div>
     <ul>
       <li><span>All-time top 20</span><span>p.01</span></li>
       <li><span>Up &amp; coming ten</span><span>p.21</span></li>
-      <li><span>Edited by</span><span>Mark Pytlik</span></li>
-      <li><span>Updated</span><span>Continuously</span></li>
+      <li><span>Edited by</span><span data-copy="hero_byline">Mark Pytlik · Continuously</span></li>
     </ul>
     <div class="head">Method</div>
     <p style="margin:0">Loosely ranked. Heavily opinionated. Sourced from a Google Sheet you can fork. Click any thumbnail to open the video on YouTube in a new tab.</p>
@@ -107,19 +105,19 @@ footer{max-width:var(--max);margin:0 auto;border:2px solid var(--rule);border-to
 
 <div class="section-h">
   <div class="num">01</div>
-  <div class="ttl">The Canon.</div>
-  <div class="meta">All-time / 001–020</div>
+  <div class="ttl" data-copy="section1_h2" data-copy-emph="section1_h2_emphasis">The <em>canon</em>.</div>
+  <div class="meta" data-copy="section1_count">All-time / 001–020</div>
 </div>
 <div id="all-time" class="list"><div class="status">Loading…</div></div>
 
 <div class="section-h">
   <div class="num">02</div>
-  <div class="ttl">Ten to watch.</div>
-  <div class="meta">Rising / 001–010</div>
+  <div class="ttl" data-copy="section2_h2" data-copy-emph="section2_h2_emphasis">Ten <em>to watch</em>.</div>
+  <div class="meta" data-copy="section2_count">Rising / 001–010</div>
 </div>
 <div id="rising" class="list"><div class="status">Loading…</div></div>
 
-<footer>End of List — Source: Google Sheet — Edit, refresh, ship.</footer>
+<footer data-copy="footer">End of List — Source: Google Sheet — Edit, refresh, ship.</footer>
 
 <script src="/shared.js"></script>
 <script>

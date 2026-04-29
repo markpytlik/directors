@@ -6,10 +6,11 @@
    ============================================================ */
 window.MVD = (function () {
   const SHEET_ID = '14wmo6vI_y8Heyxf8h5agJZu1cIsXeA9u6ngBKxpjA44';
-  const SHEET_GID = '0';
-  const SHEET_URLS = [
-    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${SHEET_GID}`,
-    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`
+  const DIRECTORS_GID = '0';
+  const COPY_GID = '1198261989';
+  const sheetUrls = (gid) => [
+    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${gid}`,
+    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`
   ];
 
   const FALLBACK = [
@@ -139,8 +140,8 @@ window.MVD = (function () {
     if (text.trim().startsWith('<')) throw new Error('Not CSV (sheet not public?)');
     return text;
   }
-  async function load() {
-    for (const url of SHEET_URLS) {
+  async function loadDirectors() {
+    for (const url of sheetUrls(DIRECTORS_GID)) {
       try {
         const text = await tryFetch(url);
         const data = normaliseFromSheet(rowsToObjects(parseCSV(text)));
@@ -148,15 +149,70 @@ window.MVD = (function () {
           console.info(`Loaded ${data.length} directors from Google Sheet.`);
           return data;
         }
-      } catch (e) { console.warn('Sheet fetch failed:', url, e.message); }
+      } catch (e) { console.warn('Directors fetch failed:', url, e.message); }
     }
-    console.info('Using bundled fallback data.');
+    console.info('Using bundled fallback director data.');
     return FALLBACK;
+  }
+  async function loadCopy() {
+    for (const url of sheetUrls(COPY_GID)) {
+      try {
+        const text = await tryFetch(url);
+        const rows = parseCSV(text);
+        // expect [key,value] rows; skip header and empty rows
+        const out = {};
+        for (const r of rows.slice(1)) {
+          const k = (r[0] || '').trim();
+          const v = (r[1] || '').trim();
+          if (k) out[k] = v;
+        }
+        if (Object.keys(out).length) {
+          console.info(`Loaded ${Object.keys(out).length} copy strings from Google Sheet.`);
+          return out;
+        }
+      } catch (e) { console.warn('Copy fetch failed:', url, e.message); }
+    }
+    return {};
+  }
+
+  /* ---------- copy application ---------- */
+  function applyCopy(copy) {
+    if (!copy || !Object.keys(copy).length) return;
+    // <title> + meta description
+    if (copy.page_title) document.title = copy.page_title;
+    if (copy.page_description) {
+      let m = document.querySelector('meta[name="description"]');
+      if (m) m.setAttribute('content', copy.page_description);
+    }
+    // walk every [data-copy] element
+    document.querySelectorAll('[data-copy]').forEach(el => {
+      const key = el.dataset.copy;
+      const val = copy[key];
+      if (val == null) return;
+      const emphKey = el.dataset.copyEmph;
+      const emphVal = emphKey ? copy[emphKey] : null;
+      const emphTag = el.dataset.copyEmphTag || 'em';
+      if (emphVal && val.indexOf(emphVal) !== -1) {
+        const parts = val.split(emphVal);
+        let html = '';
+        parts.forEach((p, i) => {
+          html += htmlEsc(p);
+          if (i < parts.length - 1) html += `<${emphTag}>${htmlEsc(emphVal)}</${emphTag}>`;
+        });
+        el.innerHTML = html;
+      } else {
+        // preserve any inner structure for elements that have it (e.g. multi-span hero)
+        // by checking if we should replace just text or whole innerHTML.
+        if (el.dataset.copyMode === 'html') el.innerHTML = val;
+        else el.textContent = val;
+      }
+    });
   }
 
   /* ---------- public API ---------- */
   function renderInto({ allTimeId, risingId, buildCard }) {
-    load().then(data => {
+    Promise.all([loadDirectors(), loadCopy()]).then(([data, copy]) => {
+      applyCopy(copy);
       const allTime = data.filter(d => d.section === 'all-time').sort((a,b)=>a.rank-b.rank);
       const rising  = data.filter(d => d.section === 'rising').sort((a,b)=>a.rank-b.rank);
       const at = document.getElementById(allTimeId);
@@ -167,7 +223,7 @@ window.MVD = (function () {
   }
 
   return {
-    renderInto,
+    renderInto, applyCopy,
     ytThumb, ytWatch, ytSearch, htmlEsc, splitArtistTrack,
     silhouetteSVG, hash, SILHOUETTES
   };

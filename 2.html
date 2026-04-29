@@ -19,11 +19,8 @@ img{display:block;max-width:100%}
 @keyframes b{0%,40%,100%{opacity:1}50%,80%{opacity:.2}}
 .hero{max-width:var(--max);margin:0 auto;padding:96px 28px 48px;position:relative}
 .hero .eye{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--magenta);margin-bottom:28px}
-.hero h1{font-family:'Anton',Impact,Helvetica,sans-serif;font-weight:400;font-size:clamp(56px,11vw,180px);line-height:.86;letter-spacing:-.02em;text-transform:uppercase;margin:0}
-.hero h1 .a{color:var(--ink)}
-.hero h1 .b{color:var(--acid)}
-.hero h1 .c{color:var(--ink);-webkit-text-stroke:1.5px var(--cyan);-webkit-text-fill-color:transparent}
-.hero h1 .d{font-style:italic;color:var(--magenta)}
+.hero h1{font-family:'Anton',Impact,Helvetica,sans-serif;font-weight:400;font-size:clamp(56px,11vw,180px);line-height:.86;letter-spacing:-.02em;text-transform:uppercase;margin:0;color:var(--ink)}
+.hero h1 em{font-style:italic;color:var(--magenta);font-family:'Anton',sans-serif;display:inline-block}
 .hero .dek{font-size:18px;line-height:1.55;color:var(--ink-2);max-width:62ch;margin-top:36px}
 .hero .meta{display:flex;gap:32px;margin-top:48px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);flex-wrap:wrap}
 .hero .meta b{color:var(--acid);font-weight:700}
@@ -68,53 +65,43 @@ footer{border-top:1px solid var(--rule);padding:64px 28px 96px;text-align:center
 <body>
 
 <nav class="theme-switcher">
-  <a href="/1.html" title="Default theme">Editorial</a>
+  <a href="/1.html" title="Editorial">Editorial</a>
   <a href="/2.html" class="on">Neon</a>
   <a href="/3.html">Brutalist</a>
   <a href="/4.html">Maximalist</a>
 </nav>
 
 <header class="mast">
-  <span><span class="blink"></span>LIVE · DIRECTORS.MARKPYTLIK.COM</span>
-  <span>VOL.01 — MUSIC&nbsp;VIDEO&nbsp;EDITION</span>
+  <span><span class="blink"></span><span data-copy="masthead_left">LIVE · DIRECTORS.MARKPYTLIK.COM</span></span>
+  <span data-copy="masthead_right">VOL.01 — MUSIC VIDEO EDITION</span>
 </header>
 
 <section class="hero">
-  <div class="eye">// THE GREATEST OF ALL TIME</div>
-  <h1>
-    <span class="a">THE 20</span><br>
-    <span class="b">GREATEST</span><br>
-    <span class="d">music video</span><br>
-    <span class="c">DIRECTORS</span><br>
-    <span class="a">EVER.</span>
-  </h1>
-  <p class="dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors who are quietly making the next decade's canon.</p>
-  <div class="meta">
-    <span>By <b>Mark Pytlik</b></span>
-    <span>30 entries</span>
-    <span>Updated continuously</span>
-  </div>
+  <div class="eye" data-copy="hero_eyebrow">// THE GREATEST OF ALL TIME</div>
+  <h1 data-copy="hero_h1" data-copy-emph="hero_h1_emphasis">THE 20 GREATEST <em>music video</em> DIRECTORS, EVER.</h1>
+  <p class="dek" data-copy="hero_dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors who are quietly making the next decade's canon.</p>
+  <div class="meta" data-copy="hero_byline">By Mark Pytlik · 30 entries · Updated continuously</div>
 </section>
 
 <div class="section-h">
   <div>
-    <div class="lab">// All-time top 20</div>
-    <h2>The <em>canon</em>.</h2>
+    <div class="lab" data-copy="section1_eyebrow">// All-time top 20</div>
+    <h2 data-copy="section1_h2" data-copy-emph="section1_h2_emphasis">The <em>canon</em>.</h2>
   </div>
-  <div class="count">001 — 020</div>
+  <div class="count" data-copy="section1_count">001 — 020</div>
 </div>
 <div id="all-time" class="list"><div class="status">// Loading…</div></div>
 
 <div class="section-h">
   <div>
-    <div class="lab">// Up &amp; coming</div>
-    <h2>Ten <em>to watch</em>.</h2>
+    <div class="lab" data-copy="section2_eyebrow">// Up &amp; coming</div>
+    <h2 data-copy="section2_h2" data-copy-emph="section2_h2_emphasis">Ten <em>to watch</em>.</h2>
   </div>
-  <div class="count">001 — 010</div>
+  <div class="count" data-copy="section2_count">001 — 010</div>
 </div>
 <div id="rising" class="list"><div class="status">// Loading…</div></div>
 
-<footer>// End of List · Source: Google Sheet</footer>
+<footer data-copy="footer">// End of List · Source: Google Sheet</footer>
 
 <script src="/shared.js"></script>
 <script>
