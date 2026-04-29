@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Greatest Music Video Directors</title>
+<meta name="description" content="An unranked-but-ordered look at the 20 greatest music video directors of all time, plus 10 worth watching now." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ------------------------------------------------------------------
+     Editorial layout, loose homage to NYT Magazine list features.
+     Newsreader stands in for Cheltenham; Inter stands in for Franklin.
+     Single file, no build step.
+     ------------------------------------------------------------------ */
+  :root {
+    --ink: #121212;
+    --ink-2: #363636;
+    --ink-3: #6a6a6a;
+    --rule: #dfdfdf;
+    --rule-strong: #121212;
+    --bg: #f8f7f3;
+    --bg-2: #ebe9e2;
+    --paper: #fffdf8;
+    --accent: #ad1d1d;
+    --max: 1240px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    border-bottom: 1px solid var(--ink);
+    padding: 18px 24px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--paper);
+  }
+  .masthead .kicker {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    font-weight: 600;
+  }
+  .masthead .pub {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 72px 24px 56px;
+    border-bottom: 1px solid var(--ink);
+    text-align: center;
+  }
+  .hero .eyebrow {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(38px, 6.4vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 auto 24px;
+    max-width: 16ch;
+  }
+  .hero h1 em { font-style: italic; font-weight: 500; }
+  .hero .dek {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+  .hero .byline {
+    margin-top: 32px;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  /* ---------- section header ---------- */
+  .section-head {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 56px 24px 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border-bottom: 1px solid var(--ink);
+    align-items: end;
+  }
+  .section-head .sh-eyebrow {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .section-head h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.6vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .section-head .sh-note {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: var(--ink-3);
+    max-width: 60ch;
+    margin-top: 6px;
+  }
+
+  /* ---------- list / grid ---------- */
+  .list {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px 64px;
+  }
+  .director {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 28px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  @media (min-width: 880px) {
+    .director {
+      grid-template-columns: 96px 320px 1fr;
+      gap: 40px;
+    }
+  }
+  .director .rank {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  @media (min-width: 880px) {
+    .director .rank { font-size: 84px; }
+  }
+  .director .portrait {
+    grid-column: 1 / -1;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    position: relative;
+  }
+  @media (min-width: 880px) {
+    .director .portrait {
+      grid-column: 2 / 3;
+      grid-row: 1 / span 2;
+    }
+  }
+  .director .portrait img,
+  .director .portrait svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .director .portrait .credit {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: rgba(255,253,248,0.85);
+    padding: 2px 6px;
+  }
+  .director .meta {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 880px) {
+    .director .meta { grid-column: 3 / 4; }
+    .director .rank { grid-column: 1 / 2; grid-row: 1 / 2; }
+  }
+  .director .name {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(26px, 2.6vw, 36px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .director .nationality {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 18px;
+  }
+  .director .blurb {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 22px;
+    max-width: 60ch;
+  }
+  .director .blurb::first-letter {
+    font-weight: 600;
+  }
+
+  /* ---------- video tiles ---------- */
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .video-tile {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    transition: transform 120ms ease, border-color 120ms ease;
+  }
+  .video-tile:hover { transform: translateY(-2px); border-color: var(--ink); }
+  .video-tile .thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--bg-2);
+    position: relative;
+    overflow: hidden;
+  }
+  .video-tile .thumb img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .video-tile .play {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+  }
+  .video-tile .play svg {
+    width: 38px; height: 38px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+    opacity: 0.92;
+  }
+  .video-tile .v-title {
+    padding: 10px 12px 12px;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--ink-2);
+    font-weight: 500;
+  }
+  .video-tile .v-title strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    border-top: 1px solid var(--ink);
+    padding: 40px 24px 80px;
+    text-align: center;
+    background: var(--paper);
+  }
+  footer .colophon {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  footer p {
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    color: var(--ink-2);
+    max-width: 60ch;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* ---------- loading state ---------- */
+  .status {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="kicker">A Personal List &middot; Music Video Edition</div>
+  <div class="pub">directors.markpytlik.com</div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">The Greatest of All Time</div>
+  <h1>The 20 greatest <em>music&nbsp;video</em> directors, ever.</h1>
+  <p class="dek">A working ranking of the people who turned three minutes of pop into something we still rewatch &mdash; plus ten directors who are quietly making the next decade&rsquo;s canon.</p>
+  <div class="byline">By Mark Pytlik &middot; Updated continuously</div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="sh-eyebrow">All-Time Top 20</div>
+    <h2>The canon.</h2>
+    <div class="sh-note">Ranked, but with no claim to objectivity. Click any thumbnail to open the video on YouTube in a new tab.</div>
+  </div>
+  <div id="all-time" class="list">
+    <div class="status">Loading list&hellip;</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="sh-eyebrow">Up & Coming</div>
+    <h2>Ten to watch.</h2>
+    <div class="sh-note">Working directors whose visual language feels new, weird, or specifically of-this-moment.</div>
+  </div>
+  <div id="rising" class="list">
+    <div class="status">Loading list&hellip;</div>
+  </div>
+</section>
+
+<footer>
+  <div class="colophon">End of List</div>
+  <p>Content driven by a Google Sheet. Edit the sheet, refresh the page &mdash; that&rsquo;s the whole CMS.</p>
+</footer>
+
+<script>
+/* ============================================================
+   CONFIG
+   ============================================================ */
+
+/* Replace the gid values if your tabs use different IDs.
+   The sheet must be shared as "Anyone with the link → Viewer"
+   for these CSV endpoints to work in the browser. */
+const SHEET_ID = '14wmo6vI_y8Heyxf8h5agJZu1cIsXeA9u6ngBKxpjA44';
+const SHEET_GID = '0';
+
+/* Try gviz first; fall back to the export endpoint. */
+const SHEET_URLS = [
+  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${SHEET_GID}`,
+  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}`
+];
+
+/* ============================================================
+   FALLBACK DATA (used if the Sheet is unreachable)
+   ============================================================ */
+const FALLBACK = [
+  // ALL-TIME TOP 20
+  { section: 'all-time', rank: 1, name: 'Hype Williams', nationality: 'United States',
+    blurb: 'No single director shaped the look of late-90s and 2000s hip-hop more decisively. Fish-eye lenses, Vaseline glow, color-blocked sets, high-fashion absurdity — Hype Williams turned the rap video into a pop-art object.',
+    videos: [
+      { id: 'fAdHQDU9_DI', title: 'Missy Elliott — The Rain' },
+      { id: 'gUhRKVIjJtw', title: 'Notorious B.I.G. — Mo Money Mo Problems' },
+      { id: 'oRGgBuPdyHk', title: 'Jay-Z — Big Pimpin\'' },
+      { id: 'PsO6ZnUZI0g', title: 'Kanye West — Stronger' }
+    ]},
+  { section: 'all-time', rank: 2, name: 'Spike Jonze', nationality: 'United States',
+    blurb: 'A wry visual prankster whose music videos are structurally inventive, performance-led, and unreasonably charming. He treats the form like short film and made it cool to do so.',
+    videos: [
+      { id: 'z5rRZdiu1UE', title: 'Beastie Boys — Sabotage' },
+      { id: '2WlS3qMQQ7c', title: 'Fatboy Slim — Praise You' },
+      { id: 'wCDIYvFmgW8', title: 'Fatboy Slim — Weapon of Choice' },
+      { id: 'PWAB8XDpCgs', title: 'Daft Punk — Da Funk' },
+      { id: 'rrgwYrnoXc8', title: 'Weezer — Buddy Holly' }
+    ]},
+  { section: 'all-time', rank: 3, name: 'Michel Gondry', nationality: 'France',
+    blurb: 'The patron saint of in-camera invention. Gondry turns rooms, mirrors, time loops, and Lego bricks into magic without leaning on VFX, and made handcraft feel like the highest possible production value.',
+    videos: [
+      { id: '0J2QdDbelmY', title: 'The White Stripes — Fell in Love with a Girl' },
+      { id: 'K0HSD_i2DvA', title: 'Daft Punk — Around the World' },
+      { id: '02vSqH59ROc', title: 'Björk — Human Behaviour' },
+      { id: 'eBG7P-K-r1Y', title: 'Foo Fighters — Everlong' },
+      { id: '0S43IwBF0uM', title: 'The Chemical Brothers — Star Guitar' }
+    ]},
+  { section: 'all-time', rank: 4, name: 'Chris Cunningham', nationality: 'United Kingdom',
+    blurb: 'Bio-mechanical horror, latex bodies, and unease — the dark mirror to Gondry\'s whimsy. His handful of videos for Aphex Twin and Björk define a whole strand of late-90s electronic visuals.',
+    videos: [
+      { id: 'UBS4Gi1y_nc', title: 'Aphex Twin — Windowlicker' },
+      { id: 'hIQrjVDXdwA', title: 'Aphex Twin — Come to Daddy' },
+      { id: 'AjI2J2SQ528', title: 'Björk — All Is Full of Love' },
+      { id: 'ojQpgJaCsBE', title: 'Squarepusher — Come On My Selector' }
+    ]},
+  { section: 'all-time', rank: 5, name: 'Jonathan Glazer', nationality: 'United Kingdom',
+    blurb: 'Cool, clinical, and conceptually exact. Glazer used the music video as a laboratory for ideas he later made into films, with an instinct for choreography and dread that no one else has matched.',
+    videos: [
+      { id: 'Th_C95UMegc', title: 'UNKLE — Rabbit in Your Headlights' },
+      { id: 'TtSdvwYbZyM', title: 'Radiohead — Karma Police' },
+      { id: '7P7r9FhEMBE', title: 'Massive Attack — Karmacoma' },
+      { id: 'a4O_Sc5FxNM', title: 'Jamiroquai — Virtual Insanity' }
+    ]},
+  { section: 'all-time', rank: 6, name: 'David Fincher', nationality: 'United States',
+    blurb: 'Before he was a film auteur, Fincher built the modern look of the slick big-budget music video — the high-contrast, locked-down, every-frame-a-poster aesthetic that defined MTV in its prime.',
+    videos: [
+      { id: 'qrO4YZeyl0I', title: 'Madonna — Vogue' },
+      { id: 'EcjxJl5ka7M', title: 'Madonna — Express Yourself' },
+      { id: '6JnGBs88sL0', title: 'George Michael — Freedom! \'90' },
+      { id: 'qrO4YZeyl0I', title: 'Aerosmith — Janie\'s Got a Gun' }
+    ]},
+  { section: 'all-time', rank: 7, name: 'Mark Romanek', nationality: 'United States',
+    blurb: 'A formalist. Romanek\'s videos look engineered down to the millimeter, with a precise visual restraint that made even the loudest songs look graceful.',
+    videos: [
+      { id: 'FvB3oSCVL2I', title: 'Johnny Cash — Hurt' },
+      { id: 'ALZHF5UqnU4', title: 'Michael & Janet Jackson — Scream' },
+      { id: 'fregObNcHC8', title: 'Nine Inch Nails — Closer' },
+      { id: 'r-yvfJTLi9w', title: 'Jay-Z — 99 Problems' }
+    ]},
+  { section: 'all-time', rank: 8, name: 'Anton Corbijn', nationality: 'Netherlands',
+    blurb: 'The eye behind Depeche Mode and Joy Division\'s afterlife. Corbijn shoots in grainy black-and-white tableaux that feel like a country, not a style.',
+    videos: [
+      { id: 'aGSKrC7dGcY', title: 'Depeche Mode — Enjoy the Silence' },
+      { id: 'lI4t1m8Mzhw', title: 'Depeche Mode — Personal Jesus' },
+      { id: 'qrOeGCJdZe4', title: 'Nirvana — Heart-Shaped Box' },
+      { id: 'PVzljDmoPVs', title: 'U2 — One' }
+    ]},
+  { section: 'all-time', rank: 9, name: 'Floria Sigismondi', nationality: 'Italy / Canada',
+    blurb: 'Gothic, surreal, body-horror-adjacent. Sigismondi\'s videos look like fashion shoots a haunted house has just woken up inside.',
+    videos: [
+      { id: 'QY_6PEsxP7s', title: 'Marilyn Manson — The Beautiful People' },
+      { id: 'pgXHbZvQHUs', title: 'David Bowie — Little Wonder' },
+      { id: 'kfVsfOSbJY0', title: 'Christina Aguilera — Fighter' },
+      { id: 'ho3lmzjkAjA', title: 'Sigur Rós — Leaning Towards Solace' }
+    ]},
+  { section: 'all-time', rank: 10, name: 'Samuel Bayer', nationality: 'United States',
+    blurb: 'One video — Smells Like Teen Spirit — was enough to redraw the entire genre. Bayer turned the high-school-pep-rally cliché into rock\'s most iconic single piece of footage.',
+    videos: [
+      { id: 'hTWKbfoikeg', title: 'Nirvana — Smells Like Teen Spirit' },
+      { id: 'Soa3gO7tL-c', title: 'Green Day — American Idiot' },
+      { id: 'Ho31j2KsBTI', title: 'Blind Melon — No Rain' },
+      { id: 'fLexgOxsZu0', title: 'The Cranberries — Zombie' }
+    ]},
+  { section: 'all-time', rank: 11, name: 'Jonas Åkerlund', nationality: 'Sweden',
+    blurb: 'Maximalism with a stopwatch. Åkerlund\'s cuts are fast, ugly-on-purpose, and cinematic, and he\'s built bigger pop spectacles than anyone working since the 2000s.',
+    videos: [
+      { id: 'eGT8ZbJl1zI', title: 'The Prodigy — Smack My Bitch Up' },
+      { id: 'tAp9BKosZXs', title: 'Madonna — Ray of Light' },
+      { id: 'qrO4YZeyl0I', title: 'Lady Gaga & Beyoncé — Telephone' },
+      { id: 'h_D3VFfhvs4', title: 'Beyoncé — Run the World (Girls)' }
+    ]},
+  { section: 'all-time', rank: 12, name: 'Joseph Kahn', nationality: 'South Korea / United States',
+    blurb: 'The blockbuster director\'s blockbuster director. Kahn turns four-minute pop into action-cinema set pieces, and his work with Taylor Swift defined a decade of the form.',
+    videos: [
+      { id: 'b1kbLwvqugk', title: 'Taylor Swift — Blank Space' },
+      { id: 'QcIy9NiNbmo', title: 'Taylor Swift — Bad Blood' },
+      { id: 'IxxstCcJlsc', title: 'Backstreet Boys — Everybody (Backstreet\'s Back)' },
+      { id: 'A_MjCqQoLLA', title: 'Eminem — Without Me' }
+    ]},
+  { section: 'all-time', rank: 13, name: 'Romain Gavras', nationality: 'France / Greece',
+    blurb: 'A provocateur with a long-lens, big-crowd sensibility. Gavras\'s videos look like the news but are choreographed within an inch of their lives.',
+    videos: [
+      { id: 'ek1ePFp-nBI', title: 'M.I.A. — Bad Girls' },
+      { id: 'iIQTQXIgQu4', title: 'M.I.A. — Born Free' },
+      { id: 'aB6oj_O9HiI', title: 'Jay-Z & Kanye West — No Church in the Wild' },
+      { id: 'ZFQbXpiIEFI', title: 'Justice — Stress' }
+    ]},
+  { section: 'all-time', rank: 14, name: 'Stéphane Sednaoui', nationality: 'France',
+    blurb: 'Color, kinetic energy, and an unmistakable warmth. Sednaoui\'s mid-90s output is a masterclass in shooting movement on a budget.',
+    videos: [
+      { id: 'mCdA4bJAGGk', title: 'Red Hot Chili Peppers — Give It Away' },
+      { id: 'XmclujwOWbI', title: 'Björk — Big Time Sensuality' },
+      { id: 'sczmVlBGrY0', title: 'U2 — Discothèque' },
+      { id: 'GH7xfgAtoao', title: 'Mirwais — Disco Science' }
+    ]},
+  { section: 'all-time', rank: 15, name: 'Mark Pellington', nationality: 'United States',
+    blurb: 'A graphic-design brain. Pellington\'s videos use typography, jump-cuts, and archival footage like punctuation, and Jeremy alone earned him a permanent spot.',
+    videos: [
+      { id: 'MS91knuzoOA', title: 'Pearl Jam — Jeremy' },
+      { id: 'NvWOYE0VQHE', title: 'PJ Harvey — Down by the Water' },
+      { id: 'pAgnJDJN4VA', title: 'Foo Fighters — My Hero' },
+      { id: 'oh3khO_HHWk', title: 'INXS — The Gift' }
+    ]},
+  { section: 'all-time', rank: 16, name: 'Russell Mulcahy', nationality: 'Australia',
+    blurb: 'Patient zero for the modern music video. Mulcahy directed the very first clip ever played on MTV and basically invented the visual grammar everyone after him riffed on.',
+    videos: [
+      { id: 'W8r-tXRLazs', title: 'The Buggles — Video Killed the Radio Star' },
+      { id: 'Lhi0ip2Z9p0', title: 'Duran Duran — Hungry Like the Wolf' },
+      { id: 'XuPj9RJgOxs', title: 'Duran Duran — Wild Boys' },
+      { id: 'gpGRtyc8GdY', title: 'Elton John — I\'m Still Standing' }
+    ]},
+  { section: 'all-time', rank: 17, name: 'Diane Martel', nationality: 'United States',
+    blurb: 'Choreography-first, body-language-first. Martel\'s videos turn a single dance idea into a whole world, and her early hip-hop and 2010s pop work both feel inevitable in retrospect.',
+    videos: [
+      { id: 'rYEDA3JcQqw', title: 'Robin Thicke — Blurred Lines' },
+      { id: 'twYa5WtUd2U', title: 'Miley Cyrus — We Can\'t Stop' },
+      { id: 'IyuUWOnS9BY', title: 'Mariah Carey — Heartbreaker' },
+      { id: 'WO2tQVOYa8s', title: 'Snoop Dogg — Beautiful' }
+    ]},
+  { section: 'all-time', rank: 18, name: 'Dave Meyers', nationality: 'United States',
+    blurb: 'Possibly the most consistent director of the past 25 years. Meyers can do the surreal-set-piece thing or the choreographed-tableau thing, and is usually behind whatever pop video everyone is talking about.',
+    videos: [
+      { id: 'RXaA_pOl4yo', title: 'Missy Elliott — Work It' },
+      { id: 'D1zMHkjQwlA', title: 'Kendrick Lamar — HUMBLE.' },
+      { id: 'pok8H_KF1FA', title: 'Travis Scott — SICKO MODE' },
+      { id: 'ZxMQQX_C9hs', title: 'Pink — So What' }
+    ]},
+  { section: 'all-time', rank: 19, name: 'Melina Matsoukas', nationality: 'United States',
+    blurb: 'Politically alert, image-led, and uncompromising. Matsoukas can make a lifestyle video and a manifesto in the same frame.',
+    videos: [
+      { id: 'wagn8Wrmzuc', title: 'Beyoncé — Formation' },
+      { id: '4m1EFMoRFvY', title: 'Rihanna — We Found Love' },
+      { id: 'tcYodQoapMg', title: 'Beyoncé — Pretty Hurts' },
+      { id: 'HL1UzIK-flA', title: 'Rihanna — S&M' }
+    ]},
+  { section: 'all-time', rank: 20, name: 'Matthew Rolston', nationality: 'United States',
+    blurb: 'A portraitist working in motion. Rolston brought a fashion-photography sensibility to MTV — controlled lighting, controlled emotion, controlled glamour.',
+    videos: [
+      { id: '-tJYN_eYzeE', title: 'TLC — Red Light Special' },
+      { id: 'NEMhFOg40Z8', title: 'Mariah Carey — Vision of Love' },
+      { id: 'PIB6AZdTr-A', title: 'Beyoncé — Naughty Girl' },
+      { id: '0Lm0YdxyTI8', title: 'En Vogue — Don\'t Let Go (Love)' }
+    ]},
+
+  // RISING TEN
+  { section: 'rising', rank: 1, name: 'Cole Bennett', nationality: 'United States',
+    blurb: 'The defining visual voice of a generation of internet-native rappers. Lyrical Lemonade is its own genre at this point.',
+    videos: [
+      { id: 'zaY9DTuHFdY', title: 'Juice WRLD — Lucid Dreams' },
+      { id: 'F-ywQqHWqcA', title: 'Eminem ft. Cordae — The Adventures of Moon Man & Slim Shady' },
+      { id: 'lyu7v7nWzfo', title: 'Lil Mosey — Blueberry Faygo' },
+      { id: 'pAVvwgGJxFs', title: 'Jack Harlow — WHATS POPPIN' }
+    ]},
+  { section: 'rising', rank: 2, name: 'Aube Perrie', nationality: 'France',
+    blurb: 'A horror sensibility filtered through high-fashion polish. Perrie\'s videos for Halsey and Måneskin sit somewhere between a giallo and a runway show.',
+    videos: [
+      { id: 'MJjzqHE07KE', title: 'Halsey — You should be sad' },
+      { id: 'TKkX8s8rg7c', title: 'Måneskin — MAMMAMIA' },
+      { id: 'IrcfWfCflPg', title: 'Halsey — I am not a woman, I\'m a god' },
+      { id: 'Fq_Y0M2sR9c', title: 'Måneskin — SUPERMODEL' }
+    ]},
+  { section: 'rising', rank: 3, name: 'Jordan Hemingway', nationality: 'United States',
+    blurb: 'Print-magazine eye, video brain. Hemingway shoots performance with a documentary closeness that feels closer to reportage than to MTV.',
+    videos: [
+      { id: 'zW3QwNxqDeI', title: 'Yves Tumor — Gospel for a New Century' },
+      { id: 'XKxZmrZsIbk', title: 'Slowthai — Doorman' },
+      { id: 'd9MyW72ELq0', title: 'Sevdaliza — Habibi' },
+      { id: '5ggBV9oGmCk', title: 'Yves Tumor — Jackie' }
+    ]},
+  { section: 'rising', rank: 4, name: 'BRTHR (Alex Lee & Kyle Wightman)', nationality: 'United States',
+    blurb: 'Color, motion blur, and bleeding LEDs. The duo make videos that look like a fever dream you had through a CRT.',
+    videos: [
+      { id: 'eVli-tstM5E', title: 'The Weeknd — Often' },
+      { id: 'b4Ip9YGteRs', title: 'Travis Scott — Stop Trying to Be God' },
+      { id: 'JVgRGAGvt00', title: 'Bring Me The Horizon — Mantra' },
+      { id: 'zL19uMsnpSU', title: 'A$AP Rocky — L$D' }
+    ]},
+  { section: 'rising', rank: 5, name: 'Imogene Strauss', nationality: 'United States',
+    blurb: 'A new-school art director\'s sensibility — set design as concept, color palette as statement. One of the most copied young visual stylists.',
+    videos: [
+      { id: 'I7c1etV7D7g', title: 'Caroline Polachek — So Hot You\'re Hurting My Feelings' },
+      { id: 'EHkozMIXZ8w', title: 'Caroline Polachek — Bunny Is a Rider' },
+      { id: 'rQVUgtfYTeQ', title: 'Charli XCX — Good Ones' },
+      { id: 'zJ7T05YvUTM', title: 'Christine and the Queens — People, I\'ve been sad' }
+    ]},
+  { section: 'rising', rank: 6, name: 'Yoni Lappin', nationality: 'United Kingdom',
+    blurb: 'British pastoral with a sharp comic timing. Lappin\'s videos for Sam Fender and Fontaines D.C. feel like short films first and music videos second.',
+    videos: [
+      { id: 'A0iWp4ZTHNM', title: 'Fontaines D.C. — Jackie Down the Line' },
+      { id: 'Q83AiRaTw28', title: 'Sam Fender — Seventeen Going Under' },
+      { id: '_3OEhmzZcvw', title: 'Wet Leg — Chaise Longue' },
+      { id: 'PMivT7MJ41M', title: 'Fontaines D.C. — Roman Holiday' }
+    ]},
+  { section: 'rising', rank: 7, name: 'Andrew Donoho', nationality: 'United States',
+    blurb: 'A versatile visualist with a love of pageantry and choreography. Donoho\'s work jumps between bombastic stadium pop and quiet character pieces.',
+    videos: [
+      { id: 'Mdh_5JGvA3w', title: 'Janelle Monáe — Make Me Feel' },
+      { id: 'WkGgyJyG9-Y', title: 'Janelle Monáe — PYNK' },
+      { id: 'Y2V6yjjPbX0', title: 'Coldplay — Higher Power' },
+      { id: 'Crl-pCxlAtQ', title: 'Walk the Moon — Shut Up and Dance' }
+    ]},
+  { section: 'rising', rank: 8, name: 'Daniel Brereton', nationality: 'United Kingdom',
+    blurb: 'A documentary-realist working in pop. Brereton\'s videos look unstaged and feel deeply staged — the trick that all great music video directors learn first.',
+    videos: [
+      { id: 'oVEqZdZRO0g', title: 'Sam Fender — Spit of You' },
+      { id: 'EwTZ2xpQwpA', title: 'Wolf Alice — How Can I Make It OK?' },
+      { id: 'kBBZpyxCgxk', title: 'Self Esteem — I Do This All the Time' },
+      { id: 'ywxnBmcPlt8', title: 'Loyle Carner — Hate' }
+    ]},
+  { section: 'rising', rank: 9, name: 'Crystal Moselle', nationality: 'United States',
+    blurb: 'Documentary-trained, scene-attuned. Moselle\'s videos have the loose, eavesdropped energy of a film about a place rather than a song.',
+    videos: [
+      { id: 'jXzuzlBqkcM', title: 'Solange — Don\'t Touch My Hair' },
+      { id: 'tQ0yjYUFKAE', title: 'Solange — Cranes in the Sky' },
+      { id: 'Pt4qIiQg7tQ', title: 'Sky Ferreira — Voices Carry' },
+      { id: 'pHbn6cnhZgw', title: 'Best Coast — California Nights' }
+    ]},
+  { section: 'rising', rank: 10, name: 'Cliqua', nationality: 'United States / United Kingdom',
+    blurb: 'A directing collective whose visual language — saturated color, sculptural set design, surreal humor — already feels like an established aesthetic.',
+    videos: [
+      { id: 'fHI8X4OXluQ', title: 'Halsey — Without Me' },
+      { id: 'OUZdZqsAjnE', title: 'Anitta — Envolver' },
+      { id: 'GtUVQei3nX4', title: 'Doja Cat — Need to Know' },
+      { id: 'EKF6ghfcQic', title: 'Doja Cat — Woman' }
+    ]}
+];
+
+/* ============================================================
+   CSV PARSER (no external libs)
+   ============================================================ */
+function parseCSV(text) {
+  const rows = [];
+  let cur = [], val = '', inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i], next = text[i+1];
+    if (inQuotes) {
+      if (c === '"' && next === '"') { val += '"'; i++; }
+      else if (c === '"') { inQuotes = false; }
+      else { val += c; }
+    } else {
+      if (c === '"') { inQuotes = true; }
+      else if (c === ',') { cur.push(val); val = ''; }
+      else if (c === '\n' || c === '\r') {
+        if (c === '\r' && next === '\n') i++;
+        cur.push(val); rows.push(cur); cur = []; val = '';
+      } else { val += c; }
+    }
+  }
+  if (val.length || cur.length) { cur.push(val); rows.push(cur); }
+  return rows.filter(r => r.length > 1 || (r.length === 1 && r[0] !== ''));
+}
+
+function rowsToObjects(rows) {
+  if (!rows.length) return [];
+  const header = rows[0].map(h => h.trim().toLowerCase().replace(/\s+/g,'_'));
+  return rows.slice(1).map(r => {
+    const o = {};
+    header.forEach((h, i) => { o[h] = (r[i] || '').trim(); });
+    return o;
+  });
+}
+
+function normaliseFromSheet(objs) {
+  // Accepts rows with columns:
+  // section, rank, name, nationality, blurb, image_url,
+  // video1_id, video1_title, video2_id, video2_title, ...
+  return objs
+    .filter(o => o.name)
+    .map(o => {
+      const videos = [];
+      for (let n = 1; n <= 6; n++) {
+        const id = o[`video${n}_id`];
+        const title = o[`video${n}_title`];
+        if (id) videos.push({ id, title: title || '' });
+      }
+      return {
+        section: (o.section || 'all-time').toLowerCase().includes('rising') || (o.section || '').toLowerCase().includes('up') ? 'rising' : 'all-time',
+        rank: parseInt(o.rank, 10) || 99,
+        name: o.name,
+        nationality: o.nationality || '',
+        blurb: o.blurb || '',
+        image: o.image_url || '',
+        videos
+      };
+    });
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+
+const SILHOUETTES = [
+  // 8 generic silhouette palettes — picked by name hash for variety
+  ['#2a2a2a', '#cdbfa4'],
+  ['#1f2933', '#bcc3cc'],
+  ['#28201b', '#d6c5a8'],
+  ['#1a2a2a', '#a9bdbd'],
+  ['#1f1c2c', '#928dab'],
+  ['#2c1f1f', '#c2a99c'],
+  ['#212121', '#b8b1a3'],
+  ['#1c2a1c', '#a8b8a0']
+];
+function hash(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = ((h<<5) - h) + str.charCodeAt(i) | 0;
+  return Math.abs(h);
+}
+
+function silhouetteSVG(name) {
+  const [bg, fg] = SILHOUETTES[hash(name) % SILHOUETTES.length];
+  // generic head-and-shoulders silhouette
+  return `<svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-label="${name} (placeholder portrait)">
+    <rect width="200" height="250" fill="${bg}"/>
+    <g fill="${fg}">
+      <circle cx="100" cy="92" r="38"/>
+      <path d="M30 250 C30 178, 60 148, 100 148 C140 148, 170 178, 170 250 Z"/>
+    </g>
+    <rect x="0" y="0" width="200" height="250" fill="url(#g_${hash(name)})"/>
+    <defs>
+      <linearGradient id="g_${hash(name)}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.06)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0.18)"/>
+      </linearGradient>
+    </defs>
+  </svg>`;
+}
+
+function ytThumb(id) {
+  // hqdefault is the most reliably available size
+  return `https://img.youtube.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`;
+}
+
+function ytSearchUrl(title) {
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(title || '')}`;
+}
+
+function htmlEsc(s) {
+  return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function videoTile(v) {
+  const safeTitle = htmlEsc(v.title || 'Watch on YouTube');
+  const watchUrl = v.id ? `https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}` : ytSearchUrl(v.title);
+  const searchUrl = ytSearchUrl(v.title);
+  // split "Artist — Track" if dash present
+  let artist = '', track = safeTitle;
+  const m = (v.title||'').match(/^(.*?)\s+[—–-]\s+(.*)$/);
+  if (m) { artist = htmlEsc(m[1]); track = htmlEsc(m[2]); }
+  return `<a class="video-tile" href="${watchUrl}" target="_blank" rel="noopener noreferrer"
+            data-search-url="${searchUrl}">
+    <div class="thumb">
+      <img src="${ytThumb(v.id||'')}" alt="${safeTitle}" loading="lazy"
+           onerror="window.__thumbFail(this)"/>
+      <div class="play"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.55)"/><polygon points="26,20 26,44 46,32" fill="#fffdf8"/></svg></div>
+    </div>
+    <div class="v-title">
+      ${artist ? `<strong>${artist}</strong>` : ''}
+      ${track}
+    </div>
+  </a>`;
+}
+
+// When a YouTube thumbnail 404s (because the ID is wrong or the video was
+// taken down), swap in a clean placeholder and re-point the link to a YouTube
+// search by title — so the click still lands the user on the right video.
+window.__thumbFail = function(img) {
+  const tile = img.closest('.video-tile');
+  if (!tile) return;
+  const search = tile.dataset.searchUrl;
+  if (search) tile.href = search;
+  const titleEl = tile.querySelector('.v-title');
+  const seed = titleEl ? titleEl.textContent.trim() : 'video';
+  const palette = SILHOUETTES[hash(seed) % SILHOUETTES.length];
+  const [bg, fg] = palette;
+  const thumb = tile.querySelector('.thumb');
+  thumb.innerHTML = `
+    <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+      <rect width="320" height="180" fill="${bg}"/>
+      <g fill="${fg}" opacity="0.55" transform="translate(140 60)">
+        <rect x="0" y="0" width="6" height="60" rx="2"/>
+        <rect x="34" y="-10" width="6" height="70" rx="2"/>
+        <path d="M0 0 L40 -10 L40 -2 L0 8 Z"/>
+        <ellipse cx="-6" cy="62" rx="10" ry="7"/>
+        <ellipse cx="28" cy="62" rx="10" ry="7"/>
+      </g>
+      <text x="160" y="160" text-anchor="middle" fill="${fg}" opacity="0.6"
+            font-family="Inter, Helvetica, Arial, sans-serif" font-size="9"
+            letter-spacing="2" text-transform="uppercase">FIND ON YOUTUBE</text>
+    </svg>
+    <div class="play"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.55)"/><polygon points="26,20 26,44 46,32" fill="#fffdf8"/></svg></div>`;
+};
+
+function directorCard(d) {
+  const portrait = d.image
+    ? `<img src="${d.image}" alt="${d.name}" loading="lazy" onerror="this.outerHTML = window.__silhouette('${d.name.replace(/'/g, "\\'")}')"/>`
+    : silhouetteSVG(d.name);
+  const videos = (d.videos || []).slice(0,5).map(videoTile).join('');
+  const rank = String(d.rank).padStart(2, '0');
+  return `<article class="director">
+    <div class="rank">${rank}</div>
+    <div class="portrait">${portrait}<span class="credit">Placeholder</span></div>
+    <div class="meta">
+      <h3 class="name">${d.name}</h3>
+      ${d.nationality ? `<div class="nationality">${d.nationality}</div>` : ''}
+      <p class="blurb">${d.blurb || ''}</p>
+      <div class="videos">${videos}</div>
+    </div>
+  </article>`;
+}
+
+window.__silhouette = silhouetteSVG;
+
+function render(data) {
+  const allTime = data.filter(d => d.section === 'all-time').sort((a,b)=>a.rank-b.rank);
+  const rising  = data.filter(d => d.section === 'rising').sort((a,b)=>a.rank-b.rank);
+  document.getElementById('all-time').innerHTML = allTime.map(directorCard).join('') ||
+    '<div class="status">No all-time entries yet.</div>';
+  document.getElementById('rising').innerHTML  = rising.map(directorCard).join('') ||
+    '<div class="status">No rising entries yet.</div>';
+}
+
+/* ============================================================
+   LOAD
+   ============================================================ */
+async function tryFetch(url) {
+  const r = await fetch(url, { mode: 'cors', credentials: 'omit' });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  const text = await r.text();
+  // gviz wraps responses in google.visualization callbacks; the CSV one returns plain CSV
+  if (text.trim().startsWith('<')) throw new Error('Not CSV (got HTML — sheet likely private)');
+  return text;
+}
+
+async function load() {
+  // try the sheet first, fall back to bundled data
+  for (const url of SHEET_URLS) {
+    try {
+      const text = await tryFetch(url);
+      const rows = parseCSV(text);
+      const objs = rowsToObjects(rows);
+      const data = normaliseFromSheet(objs);
+      if (data.length) {
+        render(data);
+        console.info(`Loaded ${data.length} directors from Google Sheet.`);
+        return;
+      }
+    } catch (e) {
+      console.warn('Sheet fetch failed:', url, e.message);
+    }
+  }
+  console.info('Using bundled fallback data.');
+  render(FALLBACK);
+}
+
+load();
+</script>
+</body>
+</html>
