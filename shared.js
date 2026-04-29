@@ -114,6 +114,24 @@ window.MVD = (function () {
     return `<svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-label="${htmlEsc(name)} (placeholder)"><rect width="200" height="250" fill="${bg}"/><g fill="${fg}"><circle cx="100" cy="92" r="38"/><path d="M30 250 C30 178, 60 148, 100 148 C140 148, 170 178, 170 250 Z"/></g></svg>`;
   }
 
+  /* YouTube returns a 200 OK with a 120×90 grey placeholder when an ID
+     doesn't exist, instead of 404'ing — so onerror won't fire. After load,
+     check the image dimensions and treat anything under 200px as failed. */
+  function validateYouTubeImage(img) {
+    if (!img || img.dataset.ytChecked) return;
+    img.dataset.ytChecked = '1';
+    const check = () => {
+      if (img.naturalWidth > 0 && img.naturalWidth < 200) {
+        window.__thumbFail(img);
+      }
+    };
+    if (img.complete) check();
+    else img.addEventListener('load', check, { once: true });
+  }
+  function validateAllYouTubeImages(root) {
+    (root || document).querySelectorAll('img[src*="img.youtube.com/vi/"]').forEach(validateYouTubeImage);
+  }
+
   /* When a YouTube thumbnail 404s, swap to a music-note placeholder and
      re-point the link to a YouTube search by title. */
   window.__thumbFail = function (img) {
@@ -219,6 +237,9 @@ window.MVD = (function () {
       const ri = document.getElementById(risingId);
       if (at) at.innerHTML = allTime.map(buildCard).join('') || '<div class="status">No all-time entries.</div>';
       if (ri) ri.innerHTML = rising.map(buildCard).join('')  || '<div class="status">No rising entries.</div>';
+      // Detect YouTube grey placeholders (200 OK with tiny 120×90 image)
+      // and trigger the music-note fallback for those tiles too.
+      validateAllYouTubeImages();
     });
   }
 
