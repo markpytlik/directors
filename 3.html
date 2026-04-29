@@ -1,147 +1,139 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>directors.markpytlik.com — Maximalist</title>
+<title>directors.markpytlik.com — Brutalist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --pink:#ff5ea3; --yellow:#ffe14d; --blue:#3a4cff; --black:#0c0a14; --white:#fff7ed; --rule:#0c0a14;
-  --max:1340px;
+  --bg:#f1efe8; --paper:#fff; --ink:#000; --rule:#000;
+  --hot:#ff3b00; --max:1320px;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--white);color:var(--black);font-family:'Space Grotesk',Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
-.mast{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:var(--black);color:var(--yellow);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;border-bottom:3px solid var(--rule);overflow:hidden;white-space:nowrap;gap:24px}
-.marquee{flex:1;text-align:center;color:var(--white);overflow:hidden}
-.marquee span{display:inline-block;animation:m 36s linear infinite;padding-right:80px}
-@keyframes m{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hero{position:relative;border-bottom:3px solid var(--rule);overflow:hidden;background:var(--white)}
-.hero .grid{max-width:var(--max);margin:0 auto;padding:64px 28px 56px;position:relative;z-index:2}
-.hero .eye{display:inline-block;background:var(--blue);color:var(--yellow);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;transform:rotate(-2deg);margin-bottom:32px}
-.hero h1{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;font-size:clamp(72px,13.5vw,220px);line-height:.84;letter-spacing:-.005em;margin:0;text-transform:uppercase}
-.hero h1 .row{display:block}
-.hero h1 .yel{color:var(--black);background:var(--yellow);padding:0 12px;display:inline-block;transform:rotate(-1deg);box-shadow:6px 6px 0 var(--black)}
-.hero h1 .pin{font-family:'DM Serif Display',serif;font-style:italic;color:var(--pink);font-weight:400;text-transform:none;letter-spacing:-.04em}
-.hero h1 .blu{color:var(--blue);text-shadow:6px 6px 0 var(--yellow)}
-.hero h1 .ko{color:transparent;-webkit-text-stroke:3px var(--black)}
-.hero .dek{font-size:20px;line-height:1.45;font-weight:500;max-width:50ch;margin:36px 0 0;color:var(--black)}
-.hero .meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:36px}
-.hero .meta span{display:inline-block;background:var(--black);color:var(--white);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px}
-.hero .meta span.b{background:var(--pink);color:var(--black)}
-.section-h{background:var(--black);color:var(--yellow);padding:32px 28px;position:relative;overflow:hidden;border-bottom:3px solid var(--rule)}
-.section-h .inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.section-h .lab{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink)}
-.section-h h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);line-height:.96;letter-spacing:.005em;margin:0;text-transform:uppercase}
-.section-h h2 em{font-family:'DM Serif Display',serif;font-style:italic;color:var(--pink);font-weight:400;text-transform:none}
-.list{max-width:var(--max);margin:0 auto;padding:0 28px}
-.dir{display:grid;grid-template-columns:140px 360px 1fr;gap:32px;padding:48px 0;border-bottom:3px solid var(--rule);align-items:start}
-@media (max-width:920px){.dir{grid-template-columns:1fr;gap:20px}}
-.dir .rank{font-family:'Bebas Neue',sans-serif;font-size:160px;line-height:.84;letter-spacing:-.02em;color:var(--black);background:var(--yellow);text-align:center;padding:20px 0;border:3px solid var(--black);box-shadow:8px 8px 0 var(--pink)}
-@media (max-width:920px){.dir .rank{font-size:96px;padding:14px 0;max-width:140px}}
-.dir.rising .rank{box-shadow:8px 8px 0 var(--blue);background:var(--pink);color:var(--black)}
-.portrait{aspect-ratio:4/5;background:var(--blue);border:3px solid var(--black);position:relative;overflow:hidden;box-shadow:8px 8px 0 var(--yellow)}
-.dir.rising .portrait{box-shadow:8px 8px 0 var(--pink);background:var(--yellow)}
+.mast{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:2px solid var(--rule);padding:0;font-family:'IBM Plex Mono',monospace}
+.mast > div{padding:14px 24px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.mast > div + div{border-left:2px solid var(--rule)}
+.hero{border-bottom:2px solid var(--rule)}
+.hero-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:0;border-left:2px solid var(--rule);border-right:2px solid var(--rule)}
+@media (max-width:920px){.hero-grid{grid-template-columns:1fr}}
+.hero-grid .l{padding:64px 40px}
+.hero-grid .r{padding:64px 32px;border-left:2px solid var(--rule);background:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.7}
+@media (max-width:920px){.hero-grid .r{border-left:none;border-top:2px solid var(--rule)}}
+.eye{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--ink);color:var(--bg);display:inline-block;padding:4px 10px;margin-bottom:32px}
+h1{font-family:'Archivo Black',Impact,sans-serif;font-weight:900;font-size:clamp(64px,11vw,180px);line-height:.84;letter-spacing:-.04em;text-transform:uppercase;margin:0}
+h1 .red{color:var(--hot)}
+h1 .ko{-webkit-text-stroke:2px var(--ink);-webkit-text-fill-color:transparent}
+.dek{font-family:'Inter',sans-serif;font-size:18px;line-height:1.45;font-weight:500;max-width:48ch;margin-top:36px}
+.r .head{font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.r ul{list-style:none;padding:0;margin:0 0 22px}
+.r li{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding:7px 0}
+.section-h{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:80px 1fr 200px;border-bottom:2px solid var(--rule);border-left:2px solid var(--rule);border-right:2px solid var(--rule)}
+.section-h > *{padding:24px;border-right:2px solid var(--rule)}
+.section-h > :last-child{border-right:none}
+.section-h .num{font-family:'Archivo Black',sans-serif;font-size:36px;line-height:1;color:var(--hot)}
+.section-h .ttl{font-family:'Archivo Black',sans-serif;font-size:48px;line-height:1;text-transform:uppercase;letter-spacing:-.02em}
+.section-h .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;text-align:right;display:flex;align-items:center;justify-content:flex-end}
+.list{max-width:var(--max);margin:0 auto;border-left:2px solid var(--rule);border-right:2px solid var(--rule)}
+.dir-block{border-bottom:2px solid var(--rule)}
+.dir{display:grid;grid-template-columns:120px 380px 1fr}
+@media (max-width:920px){.dir{grid-template-columns:1fr}}
+.dir > *{padding:32px}
+.dir > * + *{border-left:2px solid var(--rule)}
+@media (max-width:920px){.dir > * + *{border-left:none;border-top:2px solid var(--rule)}}
+.rank{font-family:'Archivo Black',sans-serif;font-size:120px;line-height:.85;letter-spacing:-.04em}
+.rank b{display:block;font-size:11px;font-family:'IBM Plex Mono',monospace;font-weight:400;letter-spacing:.18em;margin-top:14px;color:var(--hot)}
+.portrait{padding:0;position:relative;overflow:hidden;background:var(--paper);min-height:360px}
 .portrait svg,.portrait img{width:100%;height:100%;display:block;object-fit:cover}
-.portrait .tag{position:absolute;left:14px;top:14px;background:var(--pink);color:var(--black);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:5px 10px;border:2px solid var(--black);transform:rotate(-3deg);z-index:2}
-.dir.rising .portrait .tag{background:var(--blue);color:var(--yellow)}
-.meta-col{min-width:0}
-.name{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:96px;line-height:.92;letter-spacing:-.005em;text-transform:uppercase;margin:0 0 4px;color:var(--black)}
-@media (max-width:920px){.name{font-size:64px}}
-.name em{font-family:'DM Serif Display',serif;font-style:italic;color:var(--pink);font-weight:400;text-transform:none}
-.nation{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;background:var(--black);color:var(--yellow);display:inline-block;padding:5px 12px;margin-bottom:24px}
-.blurb{font-size:18px;line-height:1.5;font-weight:500;max-width:60ch;margin:0 0 28px}
-.videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
-.tile{display:block;text-decoration:none;color:var(--black);background:var(--white);border:3px solid var(--black);transition:transform .12s}
-.tile:hover{transform:translate(-2px,-2px)}
-.tile:nth-child(1){box-shadow:5px 5px 0 var(--pink)}
-.tile:nth-child(2){box-shadow:5px 5px 0 var(--blue)}
-.tile:nth-child(3){box-shadow:5px 5px 0 var(--yellow)}
-.tile:nth-child(4){box-shadow:5px 5px 0 var(--pink)}
-.tile:nth-child(5){box-shadow:5px 5px 0 var(--blue)}
-.tile .thumb{aspect-ratio:16/9;background:var(--yellow);position:relative;overflow:hidden;border-bottom:3px solid var(--black)}
-.tile .thumb img{width:100%;height:100%;object-fit:cover}
-.tile .play{position:absolute;right:10px;bottom:10px;width:42px;height:42px;background:var(--pink);border:3px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2}
-.tile .play::before{content:"";width:0;height:0;border-left:11px solid var(--black);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
-.tile .vt{padding:12px 14px 14px}
-.tile .vt b{display:block;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:22px;text-transform:uppercase;letter-spacing:.005em;line-height:1;margin-bottom:4px}
-.tile .vt s{display:block;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.06em;color:var(--black);font-weight:500}
-.status{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:48px 0;color:var(--black)}
-footer{padding:64px 28px 96px;background:var(--black);color:var(--yellow);text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-top:3px solid var(--rule)}
-.theme-switcher{position:fixed;top:62px;right:14px;display:flex;gap:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;z-index:100;border:3px solid var(--black);box-shadow:4px 4px 0 var(--pink)}
-.theme-switcher a{padding:7px 10px;background:var(--white);color:var(--black);text-decoration:none;border-right:3px solid var(--black)}
+.portrait .stamp{position:absolute;left:18px;top:18px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--hot);color:var(--paper);padding:4px 8px;z-index:2}
+.meta-col{padding:32px}
+.name{font-family:'Archivo Black',sans-serif;font-size:64px;line-height:.92;letter-spacing:-.02em;text-transform:uppercase;margin:0 0 4px}
+@media (max-width:920px){.name{font-size:48px}}
+.nation{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px}
+.blurb{font-family:'Inter',sans-serif;font-size:17px;line-height:1.5;font-weight:500;max-width:60ch;margin:0 0 28px}
+.videos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--rule)}
+@media (max-width:920px){.videos{grid-template-columns:repeat(2,1fr)}}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--paper);border-right:2px solid var(--rule)}
+.videos > .tile:last-child{border-right:none}
+@media (max-width:920px){.tile:nth-child(2n){border-right:none}.tile:nth-child(-n+2){border-bottom:2px solid var(--rule)}}
+.tile .thumb{aspect-ratio:16/9;background:#ddd;position:relative;overflow:hidden;border-bottom:2px solid var(--rule)}
+.tile .thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+.tile .num{position:absolute;left:8px;top:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;background:var(--ink);color:var(--bg);padding:3px 8px;z-index:2}
+.tile .vt{padding:14px}
+.tile .vt b{display:block;font-family:'Archivo Black',sans-serif;font-weight:900;font-size:14px;letter-spacing:-.005em;text-transform:uppercase;margin-bottom:2px}
+.tile .vt s{display:block;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink);letter-spacing:.04em}
+.status{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:32px;border-bottom:2px solid var(--rule)}
+footer{max-width:var(--max);margin:0 auto;border:2px solid var(--rule);border-top:none;padding:64px 32px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.theme-switcher{position:fixed;top:14px;right:14px;display:flex;gap:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;z-index:100;border:2px solid var(--ink)}
+.theme-switcher a{padding:7px 10px;background:var(--paper);color:var(--ink);text-decoration:none;border-right:2px solid var(--ink)}
 .theme-switcher a:last-child{border-right:none}
-.theme-switcher a.on{background:var(--black);color:var(--yellow)}
+.theme-switcher a.on{background:var(--ink);color:var(--bg)}
 </style></head>
 <body>
 
-<header class="mast">
-  <span>★ directors.markpytlik.com</span>
-  <div class="marquee"><span>Hype Williams · Spike Jonze · Michel Gondry · Chris Cunningham · Jonathan Glazer · David Fincher · Mark Romanek · Anton Corbijn · Floria Sigismondi · Samuel Bayer · Jonas Åkerlund · Joseph Kahn · Romain Gavras · Stéphane Sednaoui · Mark Pellington · Russell Mulcahy · Diane Martel · Dave Meyers · Melina Matsoukas · Matthew Rolston · Cole Bennett · Aube Perrie · Jordan Hemingway · BRTHR · Imogene Strauss · Yoni Lappin · Andrew Donoho · Daniel Brereton · Crystal Moselle · Cliqua ·&nbsp;&nbsp;&nbsp;Hype Williams · Spike Jonze · Michel Gondry · Chris Cunningham · Jonathan Glazer · David Fincher · Mark Romanek · Anton Corbijn · Floria Sigismondi · Samuel Bayer · Jonas Åkerlund · Joseph Kahn · Romain Gavras · Stéphane Sednaoui · Mark Pellington · Russell Mulcahy · Diane Martel · Dave Meyers · Melina Matsoukas · Matthew Rolston · Cole Bennett · Aube Perrie · Jordan Hemingway · BRTHR · Imogene Strauss · Yoni Lappin · Andrew Donoho · Daniel Brereton · Crystal Moselle · Cliqua ·&nbsp;&nbsp;&nbsp;</span></div>
-  <span>Vol. 01</span>
-</header>
-
 <nav class="theme-switcher">
-  <a href="/">Editorial</a>
-  <a href="/1.html">Neon</a>
-  <a href="/2.html">Brutalist</a>
-  <a href="/3.html" class="on">Maximalist</a>
+  <a href="/1.html">Editorial</a>
+  <a href="/2.html">Neon</a>
+  <a href="/3.html" class="on">Brutalist</a>
+  <a href="/4.html">Maximalist</a>
 </nav>
 
+<header class="mast">
+  <div>directors.markpytlik.com</div>
+  <div>VOL.01 / MUSIC VIDEO EDITION</div>
+  <div style="text-align:right">2026 · ONGOING</div>
+</header>
+
 <section class="hero">
-  <div class="grid">
-    <span class="eye">★ The Greatest Of All Time ★</span>
-    <h1>
-      <span class="row"><span class="yel">THE 20</span></span>
-      <span class="row blu">GREATEST</span>
-      <span class="row pin">music video</span>
-      <span class="row ko">DIRECTORS,</span>
-      <span class="row">EVER.</span>
-    </h1>
+<div class="hero-grid">
+  <div class="l">
+    <span class="eye">The greatest of all time</span>
+    <h1>The 20<br><span class="red">GREATEST</span><br><span class="ko">music video</span><br>directors,<br>ever.</h1>
     <p class="dek">A working ranking of the people who turned three minutes of pop into something we still rewatch — plus ten directors quietly making the next decade's canon.</p>
-    <div class="meta">
-      <span class="b">By Mark Pytlik</span>
-      <span>30 Entries</span>
-      <span>Updated continuously</span>
-    </div>
   </div>
+  <aside class="r">
+    <div class="head">Index</div>
+    <ul>
+      <li><span>All-time top 20</span><span>p.01</span></li>
+      <li><span>Up &amp; coming ten</span><span>p.21</span></li>
+      <li><span>Edited by</span><span>Mark Pytlik</span></li>
+      <li><span>Updated</span><span>Continuously</span></li>
+    </ul>
+    <div class="head">Method</div>
+    <p style="margin:0">Loosely ranked. Heavily opinionated. Sourced from a Google Sheet you can fork. Click any thumbnail to open the video on YouTube in a new tab.</p>
+  </aside>
+</div>
 </section>
 
 <div class="section-h">
-  <div class="inner">
-    <div>
-      <div class="lab">★ All-time top 20</div>
-      <h2>The <em>canon</em>.</h2>
-    </div>
-    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--yellow)">001 → 020</div>
-  </div>
+  <div class="num">01</div>
+  <div class="ttl">The Canon.</div>
+  <div class="meta">All-time / 001–020</div>
 </div>
 <div id="all-time" class="list"><div class="status">Loading…</div></div>
 
 <div class="section-h">
-  <div class="inner">
-    <div>
-      <div class="lab">★ Up &amp; coming</div>
-      <h2>Ten <em>to watch</em>.</h2>
-    </div>
-    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--yellow)">001 → 010</div>
-  </div>
+  <div class="num">02</div>
+  <div class="ttl">Ten to watch.</div>
+  <div class="meta">Rising / 001–010</div>
 </div>
 <div id="rising" class="list"><div class="status">Loading…</div></div>
 
-<footer>★ End of List · Source: Google Sheet · Edit, refresh, ship ★</footer>
+<footer>End of List — Source: Google Sheet — Edit, refresh, ship.</footer>
 
 <script src="/shared.js"></script>
 <script>
 const $ = s => MVD.htmlEsc(s);
 
-function videoTile(v) {
+function videoTile(v, idx) {
   const url = v.id ? MVD.ytWatch(v.id) : MVD.ytSearch(v.title);
   const search = MVD.ytSearch(v.title);
   const { artist, track } = MVD.splitArtistTrack(v.title);
+  const num = `V.${String(idx+1).padStart(2,'0')}`;
   return `<a class="tile" href="${url}" target="_blank" rel="noopener noreferrer" data-search-url="${search}" data-title="${$(v.title)}">
     <div class="thumb">
+      <span class="num">${num}</span>
       <img src="${MVD.ytThumb(v.id||'')}" alt="${$(v.title)}" loading="lazy" onerror="window.__thumbFail(this)">
-      <div class="play"></div>
     </div>
     <div class="vt">
       <b>${$(artist || track)}</b>
@@ -153,19 +145,21 @@ function videoTile(v) {
 function buildCard(d) {
   const portrait = d.image
     ? `<img src="${$(d.image)}" alt="${$(d.name)}" loading="lazy">`
-    : MVD.silhouetteSVG(d.name, d.section === 'rising' ? ['#ffe14d', '#3a4cff'] : ['#3a4cff', '#ffe14d']);
+    : MVD.silhouetteSVG(d.name, ['#000', d.section === 'rising' ? '#ff3b00' : '#ff3b00']);
   const rank = String(d.rank).padStart(2, '0');
-  const tiles = (d.videos||[]).slice(0,5).map(videoTile).join('');
-  return `<article class="dir ${d.section === 'rising' ? 'rising' : ''}">
-    <div class="rank">${rank}</div>
-    <div class="portrait">${portrait}<span class="tag">★ Placeholder</span></div>
-    <div class="meta-col">
-      <h3 class="name">${$(d.name).replace(/ /g,'<br>')}</h3>
-      <span class="nation">★ ${$(d.nationality || 'Unknown')}</span>
-      <p class="blurb">${$(d.blurb)}</p>
-      <div class="videos">${tiles}</div>
+  const tiles = (d.videos||[]).slice(0,4).map((v,i) => videoTile(v,i)).join('');
+  return `<div class="dir-block">
+    <div class="dir">
+      <div class="rank">${rank}<b>RANK</b></div>
+      <div class="portrait">${portrait}<span class="stamp">Placeholder</span></div>
+      <div class="meta-col">
+        <h3 class="name">${$(d.name).replace(/ /g,'<br>')}</h3>
+        ${d.nationality ? `<div class="nation">${$(d.nationality)}</div>` : ''}
+        <p class="blurb">${$(d.blurb)}</p>
+      </div>
     </div>
-  </article>`;
+    ${tiles ? `<div class="videos">${tiles}</div>` : ''}
+  </div>`;
 }
 
 MVD.renderInto({ allTimeId: 'all-time', risingId: 'rising', buildCard });
